@@ -49,14 +49,14 @@ def calcula_cet_anual(
 
 
 cet_anual = calcula_cet_anual(
-    credito_concedido=200000,
+    credito_concedido=200000, # valor tomado, livre de taxas extras, iof e seguros
     data_liberacao_credito=date.today(),
     # a periodicidade das parcelas é mensal
     lista_datas_pagamentos=calcula_datas(
-        data_primeira_parcela=date(2022, 4, 20),
+        data_primeira_parcela=date(2022, 4, 20), # primeira parcela de pagamento do emprestimo
         qtd_parcelas=60
     ),
-    valor_parcela=5750
+    valor_parcela=5750 # valor mensal da parcela em amortização price (todas parcelas de valor igual)
 )
 
 print(cet_anual)
